@@ -10,7 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentSlide = 0;
 
   menuToggle?.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', (!expanded).toString());
+    menuToggle.classList.toggle('is-open');
     mobileMenu?.classList.toggle('hidden');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuToggle?.classList.remove('is-open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    });
   });
 
   function updateSlide(index) {

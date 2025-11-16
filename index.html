@@ -8,7 +8,10 @@
       content="Frisotec - Engenharia em estruturas metálicas com precisão e inovação para projetos industriais e comerciais."
     />
     <meta name="author" content="Frisotec Engenharia" />
-    <meta name="keywords" content="Frisotec, estruturas metálicas, engenharia industrial, galpões, coberturas metálicas, projetos estruturais" />
+    <meta
+      name="keywords"
+      content="Frisotec, estruturas metálicas, engenharia industrial, galpões, coberturas metálicas, projetos estruturais"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0B1E3F" />
     <link rel="canonical" href="https://www.frisotec.com.br/" />
@@ -20,14 +23,20 @@
       content="Projetos e execução de estruturas metálicas com alta precisão e equipe certificada para obras industriais em todo o Brasil."
     />
     <meta property="og:url" content="https://www.frisotec.com.br/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1200&q=80" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1200&q=80"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Frisotec | Engenharia em Estruturas Metálicas" />
     <meta
       name="twitter:description"
       content="Soluções completas em estruturas metálicas, galpões e manutenção estrutural com tecnologia e precisão Frisotec."
     />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1200&q=80" />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1200&q=80"
+    />
     <title>Frisotec | Engenharia em Estruturas Metálicas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,19 +44,17 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script>
-      tailwind.config = {
+      window.tailwindConfig = {
         theme: {
           extend: {
             colors: {
-              brand: {
-                navy: '#0B1E3F',
-                graphite: '#1A1A1A',
-                silver: '#B0B7C3',
-                sky: '#007BFF',
-                ice: '#F5F6F8',
-              },
+              'brand-navy': '#0B1E3F',
+              'brand-graphite': '#1A1A1A',
+              'brand-silver': '#B0B7C3',
+              'brand-sky': '#007BFF',
+              'brand-ice': '#F5F6F8',
             },
             fontFamily: {
               sans: ['Inter', 'ui-sans-serif', 'system-ui'],
@@ -87,9 +94,7 @@
             "areaServed": "BR"
           }
         ],
-        "sameAs": [
-          "https://www.linkedin.com/company/frisotec"
-        ]
+        "sameAs": ["https://www.linkedin.com/company/frisotec"]
       }
     </script>
   </head>
@@ -100,7 +105,9 @@
     >
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#inicio" class="flex items-center space-x-3">
-          <div class="h-10 w-10 rounded-lg bg-brand-navy text-white flex items-center justify-center font-semibold">
+          <div
+            class="h-10 w-10 rounded-lg bg-brand-navy text-white flex items-center justify-center font-semibold"
+          >
             F
           </div>
           <div>
@@ -108,7 +115,9 @@
             <p class="text-xs text-gray-500 leading-none">Engenharia metálica</p>
           </div>
         </a>
-        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
+        <nav
+          class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600"
+        >
           <a href="#inicio" class="hover:text-brand-navy transition">Início</a>
           <a href="#sobre" class="hover:text-brand-navy transition">Sobre</a>
           <a href="#servicos" class="hover:text-brand-navy transition">Serviços</a>
@@ -121,24 +130,34 @@
         >
           Solicitar orçamento
         </a>
-        <button class="md:hidden text-brand-navy" id="menu-toggle" aria-label="Menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button
+          class="menu-button md:hidden p-3 rounded-2xl text-brand-navy transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-sky/60"
+          id="menu-toggle"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="sr-only">Abrir menu</span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
-      <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100 bg-white/95 backdrop-blur">
-        <nav class="flex flex-col divide-y divide-gray-100 text-sm text-gray-700">
-          <a href="#inicio" class="px-6 py-3 hover:bg-gray-50">Início</a>
-          <a href="#sobre" class="px-6 py-3 hover:bg-gray-50">Sobre</a>
-          <a href="#servicos" class="px-6 py-3 hover:bg-gray-50">Serviços</a>
-          <a href="#projetos" class="px-6 py-3 hover:bg-gray-50">Projetos</a>
-          <a href="#contato" class="px-6 py-3 hover:bg-gray-50">Contato</a>
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-white/20 bg-white/60 backdrop-blur-xl shadow-lg"
+      >
+        <nav class="flex flex-col divide-y divide-white/30 text-sm text-brand-graphite">
+          <a href="#inicio" class="px-6 py-3 hover:bg-white/30 transition">Início</a>
+          <a href="#sobre" class="px-6 py-3 hover:bg-white/30 transition">Sobre</a>
+          <a href="#servicos" class="px-6 py-3 hover:bg-white/30 transition">Serviços</a>
+          <a href="#projetos" class="px-6 py-3 hover:bg-white/30 transition">Projetos</a>
+          <a href="#contato" class="px-6 py-3 hover:bg-white/30 transition">Contato</a>
         </nav>
         <div class="px-6 py-4">
           <a
             href="#contato"
-            class="inline-flex w-full justify-center border border-brand-navy text-brand-navy rounded-lg px-4 py-2 text-sm font-semibold transition hover:bg-brand-navy hover:text-white"
+            class="inline-flex w-full justify-center border border-white/40 text-brand-navy rounded-xl px-4 py-2 text-sm font-semibold transition hover:bg-brand-navy/90 hover:text-white"
           >
             Solicitar orçamento
           </a>
@@ -151,10 +170,14 @@
       <section
         class="hero-gradient text-white min-h-screen flex items-center relative overflow-hidden"
       >
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1600&q=80')] opacity-20 bg-cover bg-center mix-blend-soft-light"></div>
+        <div
+          class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1529429617124-aee711a70412?auto=format&fit=crop&w=1600&q=80')] opacity-20 bg-cover bg-center mix-blend-soft-light"
+        ></div>
         <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 relative z-10">
           <div class="space-y-6 animate-fadeIn">
-            <span class="inline-flex items-center space-x-2 text-sm tracking-widest uppercase">
+            <span
+              class="inline-flex items-center space-x-2 text-sm tracking-widest uppercase"
+            >
               <span class="w-10 h-px bg-white/60"></span>
               <span>Engenharia premium</span>
             </span>
@@ -162,7 +185,8 @@
               Engenharia em estruturas metálicas com precisão e inovação.
             </h1>
             <p class="text-lg text-white/80">
-              Projetamos e executamos soluções sob medida para o setor industrial e comercial, unindo expertise técnica e tecnologia de ponta.
+              Projetamos e executamos soluções sob medida para o setor industrial e
+              comercial, unindo expertise técnica e tecnologia de ponta.
             </p>
             <div class="flex flex-wrap items-center gap-4">
               <a
@@ -179,10 +203,15 @@
               </a>
             </div>
           </div>
-          <div class="bg-white/10 border border-white/20 rounded-3xl p-8 backdrop-blur animate-slideUp">
-            <p class="text-sm uppercase tracking-widest text-white/70 mb-4">Excelência Frisotec</p>
+          <div
+            class="bg-white/10 border border-white/20 rounded-3xl p-8 backdrop-blur animate-slideUp"
+          >
+            <p class="text-sm uppercase tracking-widest text-white/70 mb-4">
+              Excelência Frisotec
+            </p>
             <p class="text-lg text-white/90">
-              Evoluímos para oferecer mais tecnologia, processos integrados e um atendimento nacional especializado em grandes obras metálicas.
+              Evoluímos para oferecer mais tecnologia, processos integrados e um
+              atendimento nacional especializado em grandes obras metálicas.
             </p>
             <div class="mt-8 grid grid-cols-2 gap-6 text-center">
               <div>
@@ -203,23 +232,30 @@
         <div class="max-w-6xl mx-auto px-6 grid gap-10 lg:grid-cols-2 lg:items-center">
           <div class="space-y-6">
             <div>
-              <span class="text-sm uppercase tracking-widest text-brand-sky">Quem somos</span>
+              <span class="text-sm uppercase tracking-widest text-brand-sky"
+                >Quem somos</span
+              >
               <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
                 Engenharia em estruturas metálicas com DNA Frisotec
               </h2>
             </div>
             <p class="text-base text-gray-600">
-              Especialistas em estruturas metálicas sob medida para ambientes industriais e comerciais.
-              Usamos engenharia digital, fabricação precisa e montagem limpa para entregar obras seguras sem atrasos.
+              Especialistas em estruturas metálicas sob medida para ambientes industriais
+              e comerciais. Usamos engenharia digital, fabricação precisa e montagem limpa
+              para entregar obras seguras sem atrasos.
             </p>
             <div class="grid gap-4 sm:grid-cols-2">
               <div class="p-5 rounded-2xl bg-brand-ice border border-gray-100">
                 <p class="text-sm font-semibold text-gray-900 mb-2">Missão</p>
-                <p class="text-sm text-gray-600">Projetar, fabricar e montar com eficiência e clareza.</p>
+                <p class="text-sm text-gray-600">
+                  Projetar, fabricar e montar com eficiência e clareza.
+                </p>
               </div>
               <div class="p-5 rounded-2xl bg-brand-ice border border-gray-100">
                 <p class="text-sm font-semibold text-gray-900 mb-2">Valores</p>
-                <p class="text-sm text-gray-600">Precisão, responsabilidade ambiental e respeito a prazos.</p>
+                <p class="text-sm text-gray-600">
+                  Precisão, responsabilidade ambiental e respeito a prazos.
+                </p>
               </div>
             </div>
             <div class="flex flex-wrap gap-6 pt-4 border-t border-gray-100">
@@ -239,8 +275,14 @@
               alt="Equipe de engenharia metálica"
               class="rounded-3xl shadow-2xl w-full h-auto"
             />
-            <div class="absolute bottom-6 left-6 bg-white px-8 py-5 rounded-2xl shadow-xl max-w-[280px]">
-              <p class="text-xs uppercase tracking-widest text-brand-sky font-semibold mb-1">Desde 2004</p>
+            <div
+              class="absolute bottom-6 left-6 bg-white px-8 py-5 rounded-2xl shadow-xl max-w-[280px]"
+            >
+              <p
+                class="text-xs uppercase tracking-widest text-brand-sky font-semibold mb-1"
+              >
+                Desde 2004
+              </p>
               <p class="text-2xl font-bold text-brand-navy">Precisão Frisotec</p>
               <div class="mt-3 pt-3 border-t border-gray-200">
                 <p class="text-sm text-gray-600">Excelência em estruturas metálicas</p>
@@ -259,52 +301,117 @@
               Serviços especializados
             </h2>
             <p class="text-gray-600 mt-4">
-              Cada projeto é conduzido com tecnologia BIM, planejamento integrado e acompanhamento contínuo em todas as etapas.
+              Cada projeto é conduzido com tecnologia BIM, planejamento integrado e
+              acompanhamento contínuo em todas as etapas.
             </p>
           </div>
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <article class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
-              <div class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7l9-4 9 4-9 4-9-4zm0 6l9 4 9-4m-9 4v6" />
+            <article
+              class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100"
+            >
+              <div
+                class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 7l9-4 9 4-9 4-9-4zm0 6l9 4 9-4m-9 4v6"
+                  />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Estruturas metálicas industriais</h3>
               <p class="text-sm text-gray-600">
-                Engenharias completas para plantas fabris, mezaninos e plataformas de alta performance.
+                Engenharias completas para plantas fabris, mezaninos e plataformas de alta
+                performance.
               </p>
             </article>
-            <article class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
-              <div class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M12 5l7 7-7 7" />
+            <article
+              class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100"
+            >
+              <div
+                class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M5 12h14M12 5l7 7-7 7"
+                  />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Galpões e coberturas</h3>
               <p class="text-sm text-gray-600">
-                Soluções modulares ou personalizadas com fechamento metálico, termoacústico e drenagem integrada.
+                Soluções modulares ou personalizadas com fechamento metálico,
+                termoacústico e drenagem integrada.
               </p>
             </article>
-            <article class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
-              <div class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h8m-8 5h16" />
+            <article
+              class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100"
+            >
+              <div
+                class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M4 7h16M4 12h8m-8 5h16"
+                  />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Manutenção estrutural</h3>
               <p class="text-sm text-gray-600">
-                Reforços, inspeções e modernizações de estruturas existentes com mínima parada operacional.
+                Reforços, inspeções e modernizações de estruturas existentes com mínima
+                parada operacional.
               </p>
             </article>
-            <article class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100">
-              <div class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4" />
+            <article
+              class="p-6 bg-white rounded-2xl shadow-sm hover:shadow-xl transition border border-gray-100"
+            >
+              <div
+                class="h-12 w-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 4v16m8-8H4"
+                  />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Projetos personalizados</h3>
               <p class="text-sm text-gray-600">
-                Estudos estruturais completos com análise de cargas, detalhamento e fabricação sob medida.
+                Estudos estruturais completos com análise de cargas, detalhamento e
+                fabricação sob medida.
               </p>
             </article>
           </div>
@@ -316,33 +423,85 @@
         <div class="max-w-6xl mx-auto px-6">
           <div class="flex flex-wrap items-center justify-between gap-6 text-center">
             <div class="flex-1 min-w-[200px]">
-              <div class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v12m6-6H6" />
+              <div
+                class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M12 6v12m6-6H6"
+                  />
                 </svg>
               </div>
               <p class="font-semibold text-gray-900">Precisão de projeto</p>
             </div>
             <div class="flex-1 min-w-[200px]">
-              <div class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10m-12 9h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <div
+                class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M8 7V3m8 4V3m-9 8h10m-12 9h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
               </div>
               <p class="font-semibold text-gray-900">Prazos confiáveis</p>
             </div>
             <div class="flex-1 min-w-[200px]">
-              <div class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7" />
+              <div
+                class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
               <p class="font-semibold text-gray-900">Equipe certificada</p>
             </div>
             <div class="flex-1 min-w-[200px]">
-              <div class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13 21.314 8.343 16.657m9.9-9.9L12 2.1l-6.243 4.657" />
+              <div
+                class="h-14 w-14 mx-auto rounded-full bg-white shadow flex items-center justify-center mb-3 text-brand-navy"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17.657 16.657L13 21.314 8.343 16.657m9.9-9.9L12 2.1l-6.243 4.657"
+                  />
                 </svg>
               </div>
               <p class="font-semibold text-gray-900">Atendimento nacional</p>
@@ -354,12 +513,19 @@
       <!-- Portfólio -->
       <section id="projetos" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12"
+          >
             <div>
-              <span class="text-sm uppercase tracking-widest text-brand-sky">Portfólio</span>
-              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Projetos recentes</h2>
+              <span class="text-sm uppercase tracking-widest text-brand-sky"
+                >Portfólio</span
+              >
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">
+                Projetos recentes
+              </h2>
               <p class="text-gray-600 mt-3 max-w-2xl">
-                Estruturas industriais, centros logísticos e soluções arquitetônicas metálicas executadas em diferentes regiões do Brasil.
+                Estruturas industriais, centros logísticos e soluções arquitetônicas
+                metálicas executadas em diferentes regiões do Brasil.
               </p>
             </div>
             <a
@@ -376,7 +542,9 @@
                 alt="Centro logístico"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Centro Logístico</p>
                 <p class="text-sm text-white/80">Campinas • SP</p>
               </span>
@@ -387,7 +555,9 @@
                 alt="Planta industrial"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Planta Industrial</p>
                 <p class="text-sm text-white/80">Contagem • MG</p>
               </span>
@@ -398,7 +568,9 @@
                 alt="Terminal logístico"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Terminal Multimodal</p>
                 <p class="text-sm text-white/80">Fortaleza • CE</p>
               </span>
@@ -409,7 +581,9 @@
                 alt="Hangar"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Hangar Corporativo</p>
                 <p class="text-sm text-white/80">Brasília • DF</p>
               </span>
@@ -420,7 +594,9 @@
                 alt="Shopping center"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Shopping Comercial</p>
                 <p class="text-sm text-white/80">Curitiba • PR</p>
               </span>
@@ -431,7 +607,9 @@
                 alt="Usina"
                 class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105"
               />
-              <span class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+              <span
+                class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4"
+              >
                 <p class="text-lg font-semibold">Usina de Processos</p>
                 <p class="text-sm text-white/80">Cubatão • SP</p>
               </span>
@@ -444,15 +622,21 @@
       <section class="py-20 bg-brand-ice">
         <div class="max-w-6xl mx-auto px-6">
           <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-sm uppercase tracking-widest text-brand-sky">Depoimentos</span>
+            <span class="text-sm uppercase tracking-widest text-brand-sky"
+              >Depoimentos</span
+            >
             <h2 class="text-3xl font-bold text-gray-900 mt-3">Confiança comprovada</h2>
           </div>
           <div class="relative">
-            <div class="overflow-hidden rounded-3xl bg-white shadow-lg" id="testimonial-container">
+            <div
+              class="overflow-hidden rounded-3xl bg-white shadow-lg"
+              id="testimonial-container"
+            >
               <div class="flex transition-transform duration-500" id="testimonial-track">
                 <article class="min-w-full p-10">
                   <p class="text-lg text-gray-700 italic">
-                    “A Frisotec transformou nosso centro logístico com uma estrutura metálica precisa e execução impecável. Cumpriram todos os prazos.”
+                    “A Frisotec transformou nosso centro logístico com uma estrutura
+                    metálica precisa e execução impecável. Cumpriram todos os prazos.”
                   </p>
                   <div class="mt-6">
                     <p class="font-semibold text-gray-900">Marina Albuquerque</p>
@@ -461,7 +645,8 @@
                 </article>
                 <article class="min-w-full p-10">
                   <p class="text-lg text-gray-700 italic">
-                    “Equipe técnica extremamente qualificada e comprometida com a segurança. Resultado acima das expectativas.”
+                    “Equipe técnica extremamente qualificada e comprometida com a
+                    segurança. Resultado acima das expectativas.”
                   </p>
                   <div class="mt-6">
                     <p class="font-semibold text-gray-900">Eduardo Medeiros</p>
@@ -470,7 +655,8 @@
                 </article>
                 <article class="min-w-full p-10">
                   <p class="text-lg text-gray-700 italic">
-                    “Excelência em detalhamento, fabricação e montagem. A Frisotec é parceira estratégica em nossos projetos especiais.”
+                    “Excelência em detalhamento, fabricação e montagem. A Frisotec é
+                    parceira estratégica em nossos projetos especiais.”
                   </p>
                   <div class="mt-6">
                     <p class="font-semibold text-gray-900">Cláudia Ribeiro</p>
@@ -485,8 +671,19 @@
                 id="testimonial-prev"
                 aria-label="Anterior"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M15 19l-7-7 7-7"
+                  />
                 </svg>
               </button>
               <button
@@ -494,8 +691,19 @@
                 id="testimonial-next"
                 aria-label="Próximo"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
@@ -511,7 +719,8 @@
             Pronto para estruturar o seu próximo projeto?
           </h2>
           <p class="text-lg text-white/70 mb-8">
-            Envie seu briefing ou agende uma visita técnica com nossos especialistas em engenharia metálica.
+            Envie seu briefing ou agende uma visita técnica com nossos especialistas em
+            engenharia metálica.
           </p>
           <a
             href="https://wa.me/5500000000000"
@@ -528,7 +737,9 @@
       <div class="max-w-6xl mx-auto px-6 grid gap-10 md:grid-cols-4">
         <div>
           <div class="flex items-center space-x-3">
-            <div class="h-10 w-10 rounded-lg bg-white/10 text-white flex items-center justify-center font-semibold">
+            <div
+              class="h-10 w-10 rounded-lg bg-white/10 text-white flex items-center justify-center font-semibold"
+            >
               F
             </div>
             <p class="text-xl font-semibold text-white">Frisotec</p>
@@ -564,7 +775,11 @@
               placeholder="Seu e-mail"
               class="w-full px-4 py-2 rounded-l-lg bg-white/10 text-white placeholder-gray-500 border border-white/20 focus:outline-none"
             />
-            <button class="px-4 py-2 bg-blue-600 rounded-r-lg hover:bg-blue-700 transition">Enviar</button>
+            <button
+              class="px-4 py-2 bg-blue-600 rounded-r-lg hover:bg-blue-700 transition"
+            >
+              Enviar
+            </button>
           </form>
         </div>
       </div>

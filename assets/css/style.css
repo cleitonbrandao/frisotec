@@ -39,25 +39,3 @@ body {
   background: linear-gradient(140deg, #030b1c 0%, #06204b 30%, #0a4aa1 70%, #0af3ff 100%);
   overflow: hidden;
 }
-
-.portfolio-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(11, 30, 63, 0.75);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-card:hover::after {
-  opacity: 1;
-}
-
-.portfolio-card span {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-card:hover span {
-  opacity: 1;
-}
